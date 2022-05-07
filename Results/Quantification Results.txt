@@ -1,42 +1,57 @@
+
 70218
 Total: 1649.4746017456055 cm³
 Manual: 1279.5641784667969 cm³
 Algorithm: 524.3537521362305 cm³
-Jaccard: 0.34470577992263585
+Semi-automatic: 839.7353897094727 cm³
+Jaccard (manual and algorithmic): 0.34470577992263585
+Jaccard (manual and semi-automatic): 0.48144261892841206
 __________________________________
 97100
 Total: 4330.8995361328125 cm³
 Manual: 277.4413146972656 cm³
 Algorithm: 227.7649154663086 cm³
-Jaccard: 0.6030444689337103
+Semi-automatic: 464.6975784301758 cm³
+Jaccard (manual and algorithmic): 0.6030444689337103
+Jaccard (manual and semi-automatic): 0.2976318854799008
 __________________________________
 49240
 Total: 5027.218231201172 cm³
 Manual: 13.640693664550781 cm³
 Algorithm: 30.601181030273438 cm³
-Jaccard: 0.13849750326007443
+Semi-automatic: 110.91275024414062 cm³
+Jaccard (manual and algorithmic): 0.13849750326007443
+Jaccard (manual and semi-automatic): 0.0197474272183601
 __________________________________
 50599
 Total: 37097.71881866455 cm³
 Manual: 278.86205291748047 cm³
 Algorithm: 327.2011413574219 cm³
-Jaccard: 0.42064870518260133
+Semi-automatic: 458.71490478515625 cm³
+Jaccard (manual and algorithmic): 0.42064870518260133
+Jaccard (manual and semi-automatic): 0.3903198187441392
 __________________________________
 30767
 Total: 2267.6545486450195 cm³
 Manual: 507.95562744140625 cm³
 Algorithm: 323.6978073120117 cm³
-Jaccard: 0.5372794191561497
+Semi-automatic: 460.56761169433594 cm³
+Jaccard (manual and algorithmic): 0.5372794191561497
+Jaccard (manual and semi-automatic): 0.411578318315262
 __________________________________
 19359
 Total: 2312.5352719960215 cm³
 Manual: 581.5799153745174 cm³
 Algorithm: 357.3633382966518 cm³
-Jaccard: 0.5199053111240223
+Semi-automatic: 346.21895453095436 cm³
+Jaccard (manual and algorithmic): 0.5199053111240223
+Jaccard (manual and semi-automatic): 0.4055601367003624
 __________________________________
 53956
 Total: 5065.439931783557 cm³
 Manual: 49.838237554192546 cm³
 Algorithm: 7.805810321927071 cm³
-Jaccard: 0.07560746111695356
+Semi-automatic: 0.0 cm³
+Jaccard (manual and algorithmic): 0.07560746111695356
+Jaccard (manual and semi-automatic): 0.0
 __________________________________
