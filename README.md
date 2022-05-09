@@ -12,7 +12,8 @@ Ahmed
 ## Dependencies
 [ITK SNAP 3.8.0](http://www.itksnap.org/pmwiki/pmwiki.php?n=Downloads.SNAP3)  
 [Python 3.8.13](https://www.python.org/)  
-[Simpleitk 2.1.1](https://simpleitk.org/)
+[Simpleitk 2.1.1](https://simpleitk.org/) 
+[Other more information go to the slide](https://docs.google.com/presentation/d/1nHPSiN5SzWNaCzu8MHJb3WToRN7UkW1-v6qJujCsw64/edit?usp=sharing)
 
 ## Image Viewers
 [Fiji](https://imagej.net/software/fiji/)   
