@@ -2,12 +2,12 @@
 CSC621-821 Biomedical Imaging & Analysis Group project
 
 ## Team Name
-Ahmed
-Edwin Menjivar
-Joseph Edradan
-Justin
-Lin Tun
-Sedric
+[Ahmed]
+[Edwin Menjivar]
+[Joseph Edradan]
+[Justin]
+[Lin Tun]
+[Sedric]
 
 ## Dependencies
 [ITK SNAP 3.8.0]
