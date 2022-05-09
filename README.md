@@ -19,6 +19,6 @@ Ahmed
 [Fiji](https://imagej.net/software/fiji/)   
 [Mango](https://ric.uthscsa.edu/mango/) 
 
-## Data of lung we get
+## Lung Database
 [MIDRC-RICORD-1a](https://wiki.cancerimagingarchive.net/pages/viewpage.action?pageId=80969742)  
 [MIDRC-RICORD-1b](https://wiki.cancerimagingarchive.net/pages/viewpage.action?pageId=80969771)  
