@@ -7,7 +7,7 @@ Ahmed
 [Joseph Edradan](https://github.com/josephedradan)  
 [Justin Diones](https://github.com/justdio)  
 [Lin Tun](https://github.com/Geraldlin24)  
-[Sedric](https://github.com/sedricconneally)  
+[Sedric Conneally](https://github.com/sedricconneally)  
 
 ## Dependencies
 [ITK SNAP 3.8.0](http://www.itksnap.org/pmwiki/pmwiki.php?n=Downloads.SNAP3)  
