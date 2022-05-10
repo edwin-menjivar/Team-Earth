@@ -101,6 +101,8 @@ def operation(file_path_abs: str, file_filename_path_relative: str) -> None:
 def run() -> None:
     list_file_input = os.listdir(PATH_INPUT)
 
+    list_file_input = [i for i in list_file_input if i != ".ignore"]
+
     list_dir_output = os.listdir(PATH_OUTPUT)
 
     set_dir_output_dir = set(dir_ for dir_ in list_dir_output if os.path.isdir(dir_))
