@@ -21,6 +21,7 @@ Tags:
 Reference:
 
 """
+from typing import Tuple
 
 import numpy as np
 
@@ -55,7 +56,8 @@ def set_np_ndarray_binary_using_threshold(np_ndarray_given: np.ndarray, threshol
 
 
 def calculate_count_region_sub_over_count_region_total(np_ndarray_region_total: np.ndarray,
-                                                       np_ndarray_region_sub: np.ndarray, threshold=0):
+                                                       np_ndarray_region_sub: np.ndarray,
+                                                       threshold=0) -> Tuple[float, int, int]:
     """
     Notes:
         Calculate value of
@@ -67,14 +69,21 @@ def calculate_count_region_sub_over_count_region_total(np_ndarray_region_total: 
     :return:
     """
 
-    counter_region_total = np.unique(np_ndarray_region_total, return_counts=True)
+    counter_region_total = np.unique(get_np_ndarray_binary_using_threshold(np_ndarray_region_total,
+                                                                           threshold),
+                                     return_counts=True)
 
     value_region_total_non, value_region_total = counter_region_total[0]
     count_region_total_non, count_region_total = counter_region_total[1]
 
-    counter_region_sub = np.unique(np_ndarray_region_total, return_counts=True)
+    counter_region_sub = np.unique(get_np_ndarray_binary_using_threshold(np_ndarray_region_sub,
+                                                                         threshold
+                                                                         ),
+                                   return_counts=True)
 
     value_region_sub_non, value_region_sub = counter_region_sub[0]
     count_region_sub_non, count_region_sub = counter_region_sub[1]
 
-    return count_region_sub / count_region_total
+    fraction = count_region_sub / count_region_total
+
+    return fraction, count_region_total, count_region_sub

@@ -97,8 +97,8 @@ def get_sitk_image_from_path(path: str) -> sitk.Image:
     return ct_lung_seg_utils.read_image(path)
 
 
-def get_np_ndarray_segmentation_lungmask(model_handler: handler_lungmask.ModelHandler,
-                                         sitk_image: sitk.Image) -> np.ndarray:
+def get_np_ndarray_lung_segmentation_lungmask(model_handler: handler_lungmask.ModelHandler,
+                                              sitk_image: sitk.Image) -> np.ndarray:
     """
     Get np ndarray segmentation
 
@@ -174,7 +174,7 @@ def get_sitk_image_lung_extracted_ct_lung_seg(np_ndarray_given: np.ndarray,
     return sitk_image_masked_no_vessels_shift_crop
 
 
-def get_sitk_image_segmentation_mask_covid_ct_lung_seg_from_sitk_image_lung_extracted(
+def get_sitk_image_covid_19_segmentation_ct_lung_seg_from_sitk_image_lung_extracted(
         sitk_image_lung_extracted: sitk.Image,
         center: Dict[List] = None) -> sitk.Image:
     """
@@ -213,24 +213,24 @@ def _get_model_handler_R231CovidWeb():
     return model_handler_R231CovidWeb
 
 
-def get_sitk_image_segmentation_mask_lung_lungmask_using_R231CovidWeb(path_image: str) -> sitk.Image:
+def get_sitk_image_lung_segmentation_lungmask_using_R231CovidWeb(path_image: str) -> sitk.Image:
     sitk_image_original = get_sitk_image_from_path(path_image)
 
     model_handler = _get_model_handler_R231CovidWeb()
 
     #####
 
-    np_array_segmentation_lungmask = get_np_ndarray_segmentation_lungmask(model_handler, sitk_image_original)
+    np_ndarray_lung_segmentation_lungmask = get_np_ndarray_lung_segmentation_lungmask(model_handler, sitk_image_original)
 
-    sitk_image_segmentation_lung = get_sitk_image_copy_sitk_image_information(
-        np_array_segmentation_lungmask,
+    sitk_image_lung_segmentation = get_sitk_image_copy_sitk_image_information(
+        np_ndarray_lung_segmentation_lungmask,
         sitk_image_original
     )
 
-    return sitk_image_segmentation_lung
+    return sitk_image_lung_segmentation
 
 
-def get_sitk_image_segmentation_mask_covid_ct_lung_seg_using_R231CovidWeb_all_in_one(
+def get_sitk_image_covid_19_segmentation_ct_lung_seg_using_R231CovidWeb_all_in_one(
         path_image: str) -> Tuple[sitk.Image, sitk.Image, np.ndarray, handler_lungmask.ModelHandler, sitk.Image]:
     sitk_image_original = get_sitk_image_from_path(path_image)
 
@@ -238,27 +238,27 @@ def get_sitk_image_segmentation_mask_covid_ct_lung_seg_using_R231CovidWeb_all_in
 
     #####
 
-    np_ndarray_segmentation_lungmask = get_np_ndarray_segmentation_lungmask(model_handler, sitk_image_original)
+    np_ndarray_lung_segmentation_lungmask = get_np_ndarray_lung_segmentation_lungmask(model_handler, sitk_image_original)
 
     sitk_image_lung_extracted_ct_lung_seg = get_sitk_image_lung_extracted_ct_lung_seg(
-        np_ndarray_segmentation_lungmask,
+        np_ndarray_lung_segmentation_lungmask,
         sitk_image_original
     )
 
-    sitk_image_segmentation_lung_ct_lung_seg = get_sitk_image_segmentation_mask_covid_ct_lung_seg_from_sitk_image_lung_extracted(
+    sitk_image_covid_19_segmentation_ct_lung_seg = get_sitk_image_covid_19_segmentation_ct_lung_seg_from_sitk_image_lung_extracted(
         sitk_image_lung_extracted_ct_lung_seg,
         None
     )
 
-    return (sitk_image_segmentation_lung_ct_lung_seg,
+    return (sitk_image_covid_19_segmentation_ct_lung_seg,
             sitk_image_lung_extracted_ct_lung_seg,
-            np_ndarray_segmentation_lungmask,
+            np_ndarray_lung_segmentation_lungmask,
             model_handler,
             sitk_image_original)
 
 
-def get_sitk_image_segmentation_mask_covid_ct_lung_seg_using_R231CovidWeb(path_image: str) -> sitk.Image:
-    return get_sitk_image_segmentation_mask_covid_ct_lung_seg_using_R231CovidWeb_all_in_one(path_image)[0]
+def get_sitk_image_covid_19_segmentation_ct_lung_seg_using_R231CovidWeb(path_image: str) -> sitk.Image:
+    return get_sitk_image_covid_19_segmentation_ct_lung_seg_using_R231CovidWeb_all_in_one(path_image)[0]
 
 
 if __name__ == '__main__':
